@@ -68,17 +68,20 @@ input[type=submit]:hover{
 }
 </style>
 
+
 <script type="text/javascript">
 
 function validate(){
-  var x=document.forms["myform"]["firstname"].value;
+  var x=document.getElementById("fname").value;
   console.log(x);
-  if(x==""){
-    alert=("Name must be filled out");
+  //return false;
+  if(x.length==0){
+    alert("Name must be filled out");
     return false;
-  }
+  }return true;
 }
 </script>
+
 
 </head>
 <body>
@@ -149,5 +152,6 @@ function validate(){
   <p>Footer</p>
 </footer>
 
+  
 </body>
 </html>
